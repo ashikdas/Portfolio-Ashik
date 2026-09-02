@@ -3,234 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ashik Kumar Das - ISTQB Certified SQA Engineer with 3 years of experience in software quality assurance.">
-    <title>Ashik Kumar Das - Professional Portfolio</title>
+    <meta name="description" content="Ashik Kumar Das — QA Lead | Test Automation | Performance Testing | ISTQB">
+    <title>Ashik Kumar Das — QA Lead</title>
     <style>
-        /* Reset and basic styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#b3c7d6;--glass:rgba(255,255,255,0.04)}
+        *{box-sizing:border-box}
+        body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,#071129 0%,#07172a 60%);color:#e6eef8;-webkit-font-smoothing:antialiased}
+        a{color:var(--accent)}
+        .container{max-width:1100px;margin:36px auto;padding:20px}
+        header.hero{display:flex;gap:24px;align-items:center;padding:28px;background:linear-gradient(90deg, rgba(6,182,212,0.06), rgba(6,182,212,0.02));border-radius:12px}
+        .photo{width:120px;height:120px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;color:#04132c}
+        .hero-text h1{margin:0;font-size:1.8rem}
+        .hero-text p{margin:8px 0;color:var(--muted)}
+        .hero-actions{margin-top:12px}
+        .btn{display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+        .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+        .skip-link:focus{left:12px;top:12px;width:auto;height:auto;padding:8px 12px;background:#fff;color:#04202a;border-radius:6px}
+        a:focus, .btn:focus{outline:3px solid rgba(6,182,212,0.25);outline-offset:3px}
+        .btn-primary{background:var(--accent);color:#04202a}
+        .btn-ghost{border:1px solid rgba(255,255,255,0.06);color:var(--accent);background:transparent}
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            line-height: 1.6;
-        }
+        main{display:grid;grid-template-columns:2fr 1fr;gap:24px;margin-top:24px}
+        .card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+        h2{margin:0 0 12px 0;color:#bfeafd}
+        p.lead{color:var(--muted);margin:6px 0 0}
 
-        header {
-            background-color: #34495E;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
+        .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+        .skill{background:var(--glass);padding:8px;border-radius:8px;color:#dff6fb}
 
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
+        .experience .role{margin-bottom:12px}
+        .role h3{margin:0;font-size:1rem}
+        .role .meta{color:var(--muted);font-size:0.9rem;margin-bottom:6px}
+        ul.simple{margin:8px 0 0 18px;color:var(--muted)}
 
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
+        .projects .proj{margin-bottom:12px}
 
-        nav {
-            text-align: center;
-            margin: 20px 0;
-        }
+        aside .contact-list{list-style:none;padding:0;margin:0}
+        aside .contact-list li{padding:8px 0;border-bottom:1px dashed rgba(255,255,255,0.02);color:var(--muted)}
 
-        nav a {
-            text-decoration: none;
-            color: #34495E;
-            font-size: 1.1em;
-            margin: 0 15px;
-            padding: 10px;
-            border-bottom: 2px solid transparent;
-        }
+        footer{max-width:1100px;margin:28px auto 48px;color:var(--muted);text-align:center}
 
-        nav a:hover {
-            border-bottom: 2px solid #34495E;
-        }
-
-        main {
-            max-width: 1100px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-
-        section {
-            margin-bottom: 40px;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        section h2 {
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            color: #34495E;
-        }
-
-        p, li {
-            font-size: 1em;
-        }
-
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #34495E;
-            color: white;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-
-            section h2 {
-                font-size: 1.5em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.5em;
-            }
-
-            section h2 {
-                font-size: 1.3em;
-            }
-
-            section, footer {
-                padding: 10px;
-            }
-        }
+        @media (max-width:900px){main{grid-template-columns:1fr}header.hero{flex-direction:column;align-items:flex-start}.photo{width:96px;height:96px}}
     </style>
 </head>
 <body>
-    <header>
-        <h1>Ashik Kumar Das</h1>
-        <p>ISTQB Certified SQA Engineer | 3+ Years of Experience</p>
-        <p>Email: <a href="mailto:ashikkumardas@gmail.com" style="color: white;">ashikkumardas@gmail.com</a> | Phone: +8801521458928</p>
-        <p><a href="https://github.com/ashikdas" style="color: white;">GitHub</a> | <a href="https://www.linkedin.com/in/ashik-das/" style="color: white;">LinkedIn</a></p>
-    </header>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="container">
+        <header class="hero card">
+            <div class="photo" role="img" aria-label="Portrait of Ashik Kumar Das">AK</div>
+            <div class="hero-text">
+                <h1>Ashik Kumar Das</h1>
+                <p class="lead">Sr. Software QA Engineer — Reve Systems · Test Automation · ISTQB</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" aria-label="Download resume" href="assets/resume.pdf" download="Ashik_Kumar_Das_Resume.pdf" rel="noopener">Download Resume</a>
+                    <a class="btn btn-ghost" aria-label="Send email to Ashik" href="mailto:ashikkumardas@gmail.com?subject=Contact%20from%20Website">Contact</a>
+                </div>
+            </div>
+        </header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+        <main id="main-content">
+            <section class="card">
+                <h2>Professional Summary</h2>
+                <p class="lead">Sr. Software QA Engineer with hands-on experience in test automation (Selenium, TestNG), API testing (Postman/RestAssured), and performance testing (JMeter). Skilled in designing test strategies, building automation frameworks, and improving CI/CD test pipelines to accelerate releases and reduce defects.</p>
 
-    <main>
-        <!-- About Section -->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                I am an ISTQB Certified SQA Engineer with over 3 years of professional experience in software quality assurance. My expertise includes both manual and automation testing, and I am proficient in tools like Selenium, Postman, and JIRA. I have a strong background in working on web and mobile applications, contributing to various projects to ensure their quality and performance meet the highest standards. 
-            </p>
-        </section>
+                <h2 style="margin-top:18px">Experience</h2>
+                <div class="experience">
+                    <div class="role">
+                        <h3>Sr. Software QA Engineer — Reve Systems</h3>
+                        <div class="meta">November 2023 — Present</div>
+                        <ul class="simple">
+                            <li>Lead QA for Reve Chat (web & mobile): defined release criteria and managed regression cycles.</li>
+                            <li>Designed and maintained Selenium + TestNG automation framework integrated with CI to run nightly and PR checks.</li>
+                            <li>Implemented API test suites using Postman and RestAssured; integrated results with CI reporting and test dashboards.</li>
+                            <li>Executed performance tests with JMeter; analyzed load test results and collaborated with engineering to resolve bottlenecks.</li>
+                            <li>Mentored junior QAs, wrote test plans and checklists, and coordinated cross-team QA activities using JIRA and Confluence.</li>
+                        </ul>
+                    </div>
 
-        <!-- Skills Section -->
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Programming Languages: Java, JavaScript, Python</li>
-                <li>Concepts: Agile Methodologies, STLC, OOP</li>
-                <li>Manual Testing: Test Plans, Test Cases, Defect Tracking</li>
-                <li>Tools: JIRA, Postman, Selenium, TestNG, Maven</li>
-                <li>Load Testing: JMeter</li>
-                <li>Database: MySQL</li>
-                <li>Version Control: GitHub</li>
-                <li>Web Technologies: HTML5, CSS3, Bootstrap5, WordPress</li>
-            </ul>
-        </section>
+                    <div class="role">
+                        <h3>Assistant QA Engineer — Bengal Mobile QA Solution</h3>
+                        <div class="meta">Nov 2021 — Nov 2023</div>
+                        <ul class="simple">
+                            <li>Led testing for Brac UPG Digitalization and WASH program deliveries.</li>
+                            <li>Authored test plans and collaborated with stakeholders to fix release-blocking defects.</li>
+                        </ul>
+                    </div>
+                </div>
 
-        <!-- Experience Section -->
-        <section id="experience">
-            <h2>Work Experience</h2>
-            <h3>Associate QA Engineer | Reve Systems | November 2023 - Present</h3>
-            <ul>
-                <li>Ensured the quality of the Reve Chat product (both web and mobile applications), performing functional and performance testing.</li>
-                <li>Worked with Postman for API testing, verifying response and performance metrics.</li>
-                <li>Documented and maintained test plans using Confluence and Jira.</li>
-                <li>Provided team training and mentorship on QA best practices.</li>
-            </ul>
+                <h2 style="margin-top:18px">Selected Projects</h2>
+                <div class="projects">
+                    <div class="proj">
+                        <strong>Reve Chat</strong>
+                        <p class="lead">Omnichannel communication platform — responsible for functional, regression and performance testing across web & mobile. Built automation suites for core user flows and integrated tests into CI. <a href="https://www.revechat.com/" target="_blank" rel="noopener noreferrer">Site</a></p>
+                    </div>
 
-            <h3>Assistant QA Engineer | Bengal Mobile QA Solution | November 2021 - November 2023</h3>
-            <ul>
-                <li>Led testing efforts for the UPG Digitalization project, ensuring the quality of both Android and web applications through extensive test case design and execution.</li>
-                <li>Participated in the Brac WASH project, gathering client requirements and ensuring end-to-end quality assurance, from initial requirements to final delivery.</li>
-                <li>Collaborated with development teams to track and resolve defects using Jira, enhancing software quality across various releases.</li>
-            </ul>
-        </section>
+                    <div class="proj">
+                        <strong>Brac UPG Digitalization</strong>
+                        <p class="lead">Contributed QA for Android and web applications: requirements validation, test case design, manual and automation testing, and release verification. <a href="https://upgbd.brac.net/" target="_blank" rel="noopener noreferrer">Site</a></p>
+                    </div>
 
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Projects</h2>
-            <h3>Reve Chat</h3>
-            <p>
-                A comprehensive omnichannel communication platform. I worked as the lead QA Engineer to ensure the platform's quality across its web and mobile interfaces.
-                <br><strong>Website:</strong> <a href="https://www.revechat.com/" target="_blank">Reve Chat</a>
-            </p>
+                    <div class="proj">
+                        <strong>Personal Automation Projects</strong>
+                        <p class="lead">Self-initiated automation projects (Selenium): e-commerce test suites, HRMS automation, WhatsApp UI testing, and Attendance Management System. View repositories: <a href="https://github.com/ashikdas/SeleniumProjectByAshik" target="_blank" rel="noopener noreferrer">SeleniumProjectByAshik</a>, <a href="https://github.com/ashikdas/Whatsapp" target="_blank" rel="noopener noreferrer">Whatsapp</a>, <a href="https://github.com/ashikdas/HRMS" target="_blank" rel="noopener noreferrer">HRMS</a>, <a href="https://github.com/ashikdas/Attendance-Management-System" target="_blank" rel="noopener noreferrer">Attendance-Management-System</a>.</p>
+                    </div>
+                </div>
+            </section>
 
-            <h3>Brac UPG Digitalization</h3>
-            <p>
-                Contributed as an integral QA team member responsible for testing Android and web applications for Brac’s UPG program, ensuring the delivery of a seamless user experience.
-                <br><strong>Website:</strong> <a href="https://upgbd.brac.net/" target="_blank">Brac UPG</a>
-            </p>
+            <aside>
+                <div class="card">
+                    <h2>Skills</h2>
+                    <div class="skills">
+                        <div class="skill">Test Automation: Selenium, TestNG, Maven</div>
+                        <div class="skill">API Testing: Postman, RestAssured</div>
+                        <div class="skill">Performance: JMeter</div>
+                        <div class="skill">CI / DevOps: GitHub Actions, Jenkins, Docker</div>
+                        <div class="skill">Languages: Java, JavaScript, Python</div>
+                        <div class="skill">Databases: MySQL</div>
+                        <div class="skill">Test Management: JIRA, Confluence</div>
+                        <div class="skill">Other: GitHub, ISTQB Certified</div>
+                    </div>
+                </div>
 
-            <h3>Brac WASH Program</h3>
-            <p>
-                Played a dual role in gathering requirements and performing thorough QA for the Brac WASH Program, ensuring the project met both client expectations and quality standards.
-            </p>
+                <div class="card" id="contact" style="margin-top:16px">
+                    <h2>Contact</h2>
+                    <ul class="contact-list">
+                        <li>Email: <a href="mailto:ashikkumardas@gmail.com">ashikkumardas@gmail.com</a></li>
+                        <li>Phone: +8801521458928</li>
+                        <li>LinkedIn: <a href="https://www.linkedin.com/in/ashik-das/" target="_blank">ashik-das</a></li>
+                        <li>GitHub: <a href="https://github.com/ashikdas" target="_blank">ashikdas</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+    </div>
 
-            <h3>My Store Website (Personal Learning Project)</h3>
-            <p>
-                Conducted functional, integration, and automation testing using Selenium for an e-commerce web application. The project was self-initiated for learning automation testing.
-                <br><strong>GitHub:</strong> <a href="https://github.com/ashikdas/SeleniumProjectByAshik" target="_blank">Selenium Project</a>
-            </p>
-
-            <h3>Other Projects (Self-Initiated)</h3>
-            <p>
-                <ul>
-                    <li>WhatsApp UI Automation: Functional and UI testing for WhatsApp Web interface using automation tools. <br><strong>GitHub:</strong> <a href="https://github.com/ashikdas/Whatsapp" target="_blank">GitHub Link</a></li>
-                    <li>Nexchar Website: E-commerce website automation testing, covering functional, smoke, and regression tests.</li>
-                    <li>HR Management System: Developed a web app for employee management and payrolls, implementing test automation using Selenium. <br><strong>GitHub:</strong> <a href="https://github.com/ashikdas/HRMS" target="_blank">GitHub Link</a></li>
-                    <li>Attendance Management System: A web-based attendance management tool built to track student attendance. <br><strong>GitHub:</strong> <a href="https://github.com/ashikdas/Attendance-Management-System" target="_blank">GitHub Link</a></li>
-                </ul>
-            </p>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>
-                Feel free to reach out if you are interested in my work or have any opportunities to discuss!
-            </p>
-            <ul>
-                <li>Email: <a href="mailto:ashikkumardas@gmail.com">ashikkumardas@gmail.com</a></li>
-                <li>Phone: +8801521458928</li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/ashik-das/" target="_blank">Ashik Kumar Das</a></li>
-                <li>GitHub: <a href="https://github.com/ashikdas" target="_blank">Ashik's GitHub</a></li>
-            </ul>
-        </section>
-    </main>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Ashik Kumar Das. All rights reserved.</p>
+        <p>&copy; 2026 Ashik Kumar Das — Built with focus on QA & automation.</p>
     </footer>
 </body>
 </html>
